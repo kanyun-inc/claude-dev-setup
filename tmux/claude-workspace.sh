@@ -16,16 +16,16 @@ fi
 
 # 创建 session，第一个 window 跑 claude
 tmux new-session -d -s "$SESSION" -c "$DIR" -n "claude-1"
-tmux send-keys -t "$SESSION:1" "claude" Enter
+tmux send-keys -t "$SESSION:claude-1" "claude" Enter
 
-# 第二个 window
-tmux new-window -t "$SESSION" -c "$DIR" -n "claude-2"
-tmux send-keys -t "$SESSION:2" "claude" Enter
+# 第二个 window（不带 -t，自动在当前 session 创建）
+tmux new-window -c "$DIR" -n "claude-2"
+tmux send-keys -t "$SESSION:claude-2" "claude" Enter
 
 # 第三个 window
-tmux new-window -t "$SESSION" -c "$DIR" -n "claude-3"
-tmux send-keys -t "$SESSION:3" "claude" Enter
+tmux new-window -c "$DIR" -n "claude-3"
+tmux send-keys -t "$SESSION:claude-3" "claude" Enter
 
 # 回到第一个 window，attach
-tmux select-window -t "$SESSION:1"
+tmux select-window -t "$SESSION:claude-1"
 tmux attach -t "$SESSION"
