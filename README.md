@@ -34,7 +34,7 @@
 
 ## 前提
 
-先按公司接入手册配好 Claude Code：https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=913905429
+先按看云接入手册配好 Claude Code：https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=913905429
 
 确认 `claude` 命令能正常启动后再继续。
 

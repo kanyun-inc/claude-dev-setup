@@ -1,6 +1,6 @@
 # Claude Code 配置参考
 
-> Claude Code 安装和 Bedrock 接入请按公司接入手册操作：https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=913905429
+> Claude Code 安装和 Bedrock 接入请按看云接入手册操作：https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=913905429
 
 ## alias 配置
 

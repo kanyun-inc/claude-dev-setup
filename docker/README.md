@@ -1,8 +1,8 @@
 # Docker 配置
 
-## 1. 公司 Registry 登录
+## 1. 看云 Registry 登录
 
-公司 Docker Registry 使用阿里云容器镜像服务，需要先设置固定密码再登录。
+看云 Docker Registry 使用阿里云容器镜像服务，需要先设置固定密码再登录。
 
 ### 1.1 设置固定密码（首次）
 
@@ -34,7 +34,7 @@ docker pull docker-registry.zhenguanyu.com/yuanfd/yfd_nodejs_ct8:22.19.0
 
 ### 问题
 
-docker.io 被墙，`docker pull` 官方镜像超时。需要配代理拉 docker.io，同时保证公司 registry 不走代理。
+docker.io 被墙，`docker pull` 官方镜像超时。需要配代理拉 docker.io，同时保证看云 registry 不走代理。
 
 ### 配置步骤
 
@@ -56,7 +56,7 @@ docker.io 被墙，`docker pull` 官方镜像超时。需要配代理拉 docker.
 # 官方镜像（包括 arm64）
 docker pull --platform linux/arm64 node:22-slim
 
-# 公司 registry（不走代理）
+# 看云 registry（不走代理）
 docker pull docker-registry.zhenguanyu.com/yuanfd/yfd_nodejs_ct8:22.19.0
 ```
 
@@ -93,7 +93,7 @@ docker info | grep -i proxy
 # 看到 http.docker.internal:3128 说明是 Docker Desktop 内部代理在转发
 ```
 
-#### Q: 配了代理后公司 registry 连不上？
+#### Q: 配了代理后看云 registry 连不上？
 
 确保 Bypass proxy 里包含 `*.zhenguanyu.com,docker-registry.zhenguanyu.com`。
 

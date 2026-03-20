@@ -1,5 +1,5 @@
 # === Claude Code ===
-# Bedrock 接入请按公司接入手册配置:
+# Bedrock 接入请按看云接入手册配置:
 # https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=913905429
 
 # 默认跳过权限确认（提高效率），claude-safe 恢复确认模式
