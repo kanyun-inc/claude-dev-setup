@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Platform-macOS-blue?style=flat-square&logo=apple" alt="macOS">
-  <img src="https://img.shields.io/badge/Shell-zsh-green?style=flat-square" alt="zsh">
+  <img src="https://img.shields.io/badge/Platform-macOS%20%7C%20Linux-blue?style=flat-square&logo=apple" alt="macOS | Linux">
+  <img src="https://img.shields.io/badge/Shell-zsh%20%7C%20bash-green?style=flat-square" alt="zsh | bash">
   <img src="https://img.shields.io/badge/AI-Claude_Code-purple?style=flat-square" alt="Claude Code">
 </p>
 
@@ -34,18 +34,20 @@
 
 ## 前提
 
-先按看云接入手册配好 Claude Code：https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=913905429
+1. 按看云接入手册配好 Claude Code：https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=913905429
+2. 确认 `claude` 命令能正常启动
 
-确认 `claude` 命令能正常启动后再继续。
+> 还没装 Claude Code？`curl -fsSL https://claude.ai/install.sh | bash`
 
 ## 使用
 
 ```bash
-# 1. Clone
-git clone git@github.com:kanyun-inc/claude-dev-setup.git ~/develop/claude-dev-setup
+# 1. Clone（放哪都行）
+git clone https://github.com/kanyun-inc/claude-dev-setup.git
+cd claude-dev-setup
 
 # 2. 启动 Claude Code
-cd ~/develop/claude-dev-setup && claude
+claude
 
 # 3. 一键配置
 /setup
