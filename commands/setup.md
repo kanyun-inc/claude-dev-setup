@@ -227,6 +227,31 @@ echo "$http_proxy" | grep -q proxy && echo "✅ 代理已开启" || echo "⚠️
 
 告诉用户结果，以及任何还需要手动处理的事项。
 
+## Step 12: Sparring（可选）
+
+告诉用户：
+
+```
+想试试双 AI 互搏吗？Sparring 让 Claude Code 写代码、Cursor Agent 审查，互相 review 提升质量。
+还可以搭配 ClawTeam 实现多 Agent 并行编排。
+
+详情: https://github.com/krislavten/dual-ai-workflow
+```
+
+问用户："要安装 Sparring 吗？"
+
+如果用户同意：
+```bash
+# 安装 Sparring plugin
+claude /plugin marketplace add krislavten/dual-ai-workflow
+claude /plugin install sparring@sparring
+
+# 安装 ClawTeam（多 Agent 并行编排）
+pipx install clawteam
+```
+
+告诉用户安装完需要重启 Claude Code session 才能使用 `/sparring:*` 命令。
+
 ## 完成
 
 ```

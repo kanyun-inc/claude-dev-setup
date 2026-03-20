@@ -75,6 +75,12 @@ claude      # 默认跳过权限确认
 claude-safe # 带权限确认
 ```
 
+## 进阶：双 AI 互搏 + 多 Agent 并行
+
+基础环境配好后，可以试试 [Sparring](https://github.com/krislavten/dual-ai-workflow) — Claude Code 执行 + Cursor Agent 审查的双 AI 协作工作流。还可以搭配 ClawTeam 实现多 Agent 并行编排。
+
+安装：Setup 完成后 Claude 会提示是否安装。
+
 ## 目录说明
 
 | 目录 | 内容 |
