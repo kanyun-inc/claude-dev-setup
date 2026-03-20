@@ -204,7 +204,7 @@ cp "$REPO_DIR/tmux/.tmux.conf" ~/.tmux.conf
 ```
 # tmux + claude 工作区（3 个 window 各跑一个 claude）
 alias claude-workspace="bash $REPO_DIR/tmux/claude-workspace.sh"
-alias cw="claude-workspace"
+alias cw="bash $REPO_DIR/tmux/claude-workspace.sh"
 ```
 
 告诉用户：
