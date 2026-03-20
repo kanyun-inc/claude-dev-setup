@@ -1,18 +1,6 @@
-# === Claude Code + Bedrock ===
-# 复制以下内容到 ~/.zshrc
-
-# Bedrock 模式
-export CLAUDE_CODE_USE_BEDROCK=1
-export AWS_REGION=us-west-2
-export AWS_ACCESS_KEY_ID="你的AK"
-export AWS_SECRET_ACCESS_KEY="你的SK"
-
-# 模型（公司 Application Inference Profile）
-export ANTHROPIC_MODEL="arn:aws:bedrock:us-west-2:<ACCOUNT_ID>:application-inference-profile/<PROFILE_ID>[1m]"
-export ANTHROPIC_DEFAULT_HAIKU_MODEL="arn:aws:bedrock:us-west-2:<ACCOUNT_ID>:application-inference-profile/<HAIKU_PROFILE_ID>"
-
-# Agent Teams
-export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
+# === Claude Code ===
+# Bedrock 接入请按公司接入手册配置:
+# https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=913905429
 
 # 默认跳过权限确认（提高效率），claude-safe 恢复确认模式
 alias claude="claude --dangerously-skip-permissions"

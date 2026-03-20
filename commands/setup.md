@@ -156,8 +156,8 @@ gh auth status
 
 如果不存在，找到本 repo 的 `tmux/.tmux.conf` 并复制：
 ```bash
-# 找到 dev-setup repo 的位置
-REPO_DIR=$(find ~/develop -maxdepth 2 -name "dev-setup" -type d 2>/dev/null | head -1)
+# 找到 claude-dev-setup repo 的位置
+REPO_DIR=$(find ~/develop -maxdepth 2 -name "claude-dev-setup" -type d 2>/dev/null | head -1)
 if [ -n "$REPO_DIR" ] && [ -f "$REPO_DIR/tmux/.tmux.conf" ]; then
   cp "$REPO_DIR/tmux/.tmux.conf" ~/.tmux.conf
 fi
@@ -174,7 +174,8 @@ fi
 cat >> ~/.zshrc << 'EOF'
 
 # tmux + claude 工作区（3 个 window 各跑一个 claude）
-alias claude-workspace="bash ~/develop/dev-setup/tmux/claude-workspace.sh"
+alias claude-workspace="bash ~/develop/claude-dev-setup/tmux/claude-workspace.sh"
+alias cw="claude-workspace"
 EOF
 ```
 
@@ -240,17 +241,18 @@ echo "$http_proxy" | grep -q proxy && echo "✅ 代理已开启" || echo "⚠️
 
 问用户："要安装 Sparring 吗？"
 
-如果用户同意：
-```bash
-# 安装 Sparring plugin
-claude /plugin marketplace add krislavten/dual-ai-workflow
-claude /plugin install sparring@sparring
+如果用户同意，告诉用户退出当前 Claude Code session 后执行：
+```
+/plugin marketplace add krislavten/dual-ai-workflow
+/plugin install sparring@sparring
+```
 
-# 安装 ClawTeam（多 Agent 并行编排）
+ClawTeam（多 Agent 并行编排）需要额外安装：
+```bash
 pipx install clawteam
 ```
 
-告诉用户安装完需要重启 Claude Code session 才能使用 `/sparring:*` 命令。
+告诉用户安装完重启 Claude Code session 后就能使用 `/sparring:*` 命令。
 
 ## 完成
 

@@ -3,7 +3,7 @@
 # Usage: bash claude-workspace.sh [project-dir]
 #
 # 建议加 alias 到 ~/.zshrc:
-#   alias cw="bash ~/develop/dev-setup/tmux/claude-workspace.sh"
+#   alias claude-workspace="bash ~/develop/claude-dev-setup/tmux/claude-workspace.sh"
 
 SESSION="claude"
 DIR="${1:-$(pwd)}"

@@ -33,14 +33,14 @@ tmux source-file ~/.tmux.conf
 
 ```bash
 # 加 alias 到 ~/.zshrc（/setup 会自动配）
-alias cw="bash ~/develop/dev-setup/tmux/claude-workspace.sh"
+alias claude-workspace="bash ~/develop/claude-dev-setup/tmux/claude-workspace.sh"
 
 # 使用
-cw                    # 当前目录，3 个 claude
-cw ~/develop/rush     # 指定项目目录
+claude-workspace                    # 当前目录，3 个 claude
+claude-workspace ~/develop/rush     # 指定项目目录
 ```
 
-`Ctrl+a 1/2/3` 切换窗口。重复执行 `cw` 会 attach 已有 session。
+`Ctrl+a 1/2/3` 切换窗口。重复执行 `claude-workspace` 会 attach 已有 session。
 
 ## 常用快捷键
 

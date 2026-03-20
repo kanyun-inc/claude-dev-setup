@@ -31,7 +31,7 @@ brew bundle --file=Brewfile
 或者手动安装核心工具：
 
 ```bash
-brew install git gh jq tmux nvm pnpm ripgrep fd bat fzf awscli
+brew install gh jq tmux nvm
 brew install --cask docker
 ```
 
