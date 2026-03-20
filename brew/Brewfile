@@ -1,0 +1,8 @@
+# dev-setup Brewfile
+# 安装: brew bundle --file=Brewfile
+
+brew "gh"                    # GitHub CLI
+brew "jq"                    # JSON 处理
+brew "tmux"                  # 终端复用
+brew "nvm"                   # Node 版本管理
+cask "docker"                # Docker Desktop
