@@ -24,10 +24,5 @@ jobs:
             -e AWS_ACCESS_KEY_ID="${{ secrets.AWS_ACCESS_KEY_ID }}" \
             -e AWS_SECRET_ACCESS_KEY="${{ secrets.AWS_SECRET_ACCESS_KEY }}" \
             -e ANTHROPIC_MODEL="${{ secrets.ANTHROPIC_MODEL }}" \
-            -e HTTP_PROXY="${{ secrets.HTTP_PROXY }}" \
-            -e HTTPS_PROXY="${{ secrets.HTTP_PROXY }}" \
-            -e http_proxy="${{ secrets.HTTP_PROXY }}" \
-            -e https_proxy="${{ secrets.HTTP_PROXY }}" \
-            -e no_proxy="localhost,127.0.0.1" \
             claude-dev-setup-test \
             bash /workspace/test/test.sh
