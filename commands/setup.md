@@ -127,28 +127,6 @@ alias claude-safe="command claude"
 EOF
 ```
 
-### Bedrock 配置
-
-检查 `~/.zshrc` 是否已有 `CLAUDE_CODE_USE_BEDROCK`。如果没有：
-
-问用户："需要配置 AWS Bedrock 吗？需要你的 AWS Access Key ID 和 Secret Access Key。"
-
-如果用户提供了 AK/SK，追加到 `~/.zshrc`：
-```bash
-export CLAUDE_CODE_USE_BEDROCK=1
-export AWS_REGION=us-west-2
-export AWS_ACCESS_KEY_ID="用户提供的AK"
-export AWS_SECRET_ACCESS_KEY="用户提供的SK"
-export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
-```
-
-如果用户还提供了模型 ARN，也一并写入：
-```bash
-export ANTHROPIC_MODEL="用户提供的ARN"
-```
-
-如果用户没有 AK/SK，告诉他找管理员获取，跳过这步。
-
 ## Step 7: Cursor Agent CLI
 
 ```bash
@@ -226,7 +204,7 @@ Docker 需要手动配置两件事：
    - HTTP/HTTPS: http://proxy.zhenguanyu.com:8118
    - Bypass: localhost,127.0.0.1,*.zhenguanyu.com,docker-registry.zhenguanyu.com,*.cn-beijing.aliyuncs.com
 
-详见: https://github.com/kanyun-inc/dev-setup/blob/main/docker/README.md
+详见: https://github.com/kanyun-inc/claude-dev-setup/blob/main/docker/README.md
 ```
 
 ## Step 11: 验证

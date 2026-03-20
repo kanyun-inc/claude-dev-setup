@@ -1,7 +1,7 @@
-<h1 align="center">dev-setup</h1>
+<h1 align="center">claude-dev-setup</h1>
 
 <p align="center">
-  <strong>新人入职第一天，一条命令搞定开发环境</strong>
+  <strong>一条命令搞定 Claude Code 开发环境</strong>
 </p>
 
 <p align="center">
@@ -14,11 +14,9 @@
 
 ## 为什么做这个
 
-每个新同事入职都要花半天到一天配环境：brew 装不上（镜像源没配）、docker pull 超时（docker.io 被墙）、Claude Code 连不上 Bedrock（代理没配对）、tmux 快捷键不顺手...
+配环境总要踩坑：brew 装不上（镜像源没配）、docker pull 超时（docker.io 被墙）、tmux 快捷键不顺手...
 
-每个人踩一遍坑，每个人问一遍"怎么配代理"。
-
-**dev-setup 把所有坑填好了。** 在 Claude Code 里执行 `/setup`，Claude 会交互式地帮你检查、安装、配置，遇到问题自己判断修复。
+**claude-dev-setup 把这些坑填好了。** 在 Claude Code 里执行 `/setup`，Claude 会交互式地帮你检查、安装、配置，遇到问题自己判断修复。
 
 ## 执行后你会得到
 
@@ -29,17 +27,22 @@
 ✅ tmux          — 终端复用（Ctrl+a 前缀、鼠标支持）
 ✅ nvm + node    — Node.js 版本管理
 ✅ claude alias  — claude 命令默认跳过权限确认（提效）
-✅ Bedrock 配置  — AWS 凭证 + 模型 ARN（Claude Code 可用）
 ✅ 代理          — proxy_on / proxy_off 一键切换
 ✅ Docker        — Registry 登录 + 代理配置指引
 ✅ claude-workspace — tmux 一键开 3 个 claude 窗口并行开发
 ```
 
+## 前提
+
+先按公司接入手册配好 Claude Code：https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=913905429
+
+确认 `claude` 命令能正常启动后再继续。
+
 ## 使用
 
 ```bash
 # 1. Clone
-git clone git@github.com:kanyun-inc/dev-setup.git ~/develop/dev-setup
+git clone git@github.com:kanyun-inc/claude-dev-setup.git ~/develop/dev-setup
 
 # 2. 启动 Claude Code
 cd ~/develop/dev-setup && claude
@@ -78,6 +81,6 @@ claude-safe # 带权限确认
 |------|------|
 | [commands/setup.md](commands/setup.md) | `/setup` 命令 — Claude Code 交互式配置 |
 | [docker/](docker/README.md) | Docker Registry 登录（阿里云）+ 代理配置 |
-| [claude-code/](claude-code/README.md) | Bedrock 接入、模型 ARN、代理 |
+| [claude-code/](claude-code/README.md) | Claude Code alias、代理配置参考 |
 | [tmux/](tmux/README.md) | tmux 配置 + claude-workspace 脚本 |
 | [brew/](brew/README.md) | Homebrew 镜像源 + Brewfile |
